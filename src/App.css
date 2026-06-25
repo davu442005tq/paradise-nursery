@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
 }
 
-.landing {
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,10 +32,13 @@ body {
   font-weight: 700;
   color: #4caf50;
   letter-spacing: 1px;
+  cursor: pointer;
+  user-select: none;
 }
 
 nav {
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 
@@ -48,6 +51,33 @@ nav a {
 
 nav a:hover {
   color: #4caf50;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #4caf50;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-section {
