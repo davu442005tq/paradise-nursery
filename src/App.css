@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4caf50;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #4caf50;
+}
+
+.hero-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.company-name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #b0bec5;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.get-started-btn {
+  padding: 16px 48px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.get-started-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.6);
+}
+
+.get-started-btn:active {
+  transform: translateY(0);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plant-decoration {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.leaf {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.leaf-1 {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #4caf50, #1b5e20);
+  top: 10%;
+  left: 20%;
+  animation: float 4s ease-in-out infinite;
+}
+
+.leaf-2 {
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, #66bb6a, #2e7d32);
+  top: 50%;
+  left: 60%;
+  animation: float 5s ease-in-out infinite 1s;
+}
+
+.leaf-3 {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, #81c784, #388e3c);
+  top: 30%;
+  left: 10%;
+  animation: float 6s ease-in-out infinite 2s;
+}
+
+.leaf-4 {
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle, #a5d6a7, #4caf50);
+  top: 60%;
+  left: 30%;
+  animation: float 4.5s ease-in-out infinite 0.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 24px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .company-name {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .plant-decoration {
+    width: 200px;
+    height: 200px;
+  }
+}
