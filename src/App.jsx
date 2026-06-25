@@ -1,6 +1,7 @@
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import ProductList from './components/ProductList'
+import CartItem from './components/CartItem'
 import './App.css'
 
 function LandingPage() {
@@ -53,6 +54,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/products" element={<ProductList />} />
+        <Route path="/cart" element={<CartItem />} />
       </Routes>
     </div>
   )
